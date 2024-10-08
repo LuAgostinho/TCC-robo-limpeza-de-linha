@@ -13,10 +13,10 @@ services:
       - "3000:80"
 
   ros-master:
-    image: lucasagostinho/tcc:latest
+    image: fagnerpimentel/aprendendo_ros2:latest
     ipc: host
     volumes:
-      - ./src:/home/robot/ws_TCC/src:rw
+      - ./src:/home/robot/ws_aprendendo_ros2/src:rw
     depends_on:
       - xserver
     volumes_from:
@@ -33,3 +33,10 @@ services:
         source install/setup.bash &&
         xterm -hold -T Terminal -e "tmux" |
         ros2 run rqt_gui rqt_gui --perspective-file src/pacote_de_exemplos/config/Default.perspective 
+        # xterm -maximized -hold -T teste -e "ros2 launch pacote_de_exemplos exemplo.launch.py" 
+        # xterm -maximized -hold -T teste -e "ros2 launch pacote_de_exemplos display.launch.py" 
+        # xterm -maximized -hold -T teste -e "ros2 launch pacote_de_exemplos mapping_slam_toolbox.launch.py" 
+        # xterm -maximized -hold -T teste -e "ros2 launch pacote_de_exemplos mapping_cartographer.launch.py" 
+        # xterm -maximized -hold -T teste -e "ros2 launch pacote_de_exemplos navigation.launch.py" 
+        # xterm -maximized -hold -T teste -e "ros2 launch pacote_de_exemplos turtlebot.launch.py"
+        # xterm -maximized -hold -T teste -e "ros2 launch pacote_de_exemplos navigation2.launch.py"

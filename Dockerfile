@@ -2,25 +2,25 @@ FROM osrf/ros:humble-desktop-full
 ARG ROS_DISTRO=humble
 ARG DEBIAN_FRONTEND=noninteractive 
 
-# User: robot (password: robot) with sudo power
-ARG UID=1000
-ARG GID=1000
-RUN useradd -ms /bin/bash robot && echo "robot:robot" | chpasswd && adduser robot sudo
-RUN usermod -u $UID robot && groupmod -g $GID robot
-USER robot
-USER root
+# # User: robot (password: robot) with sudo power
+# ARG UID=1000
+# ARG GID=1000
+# RUN useradd -ms /bin/bash robot && echo "robot:robot" | chpasswd && adduser robot sudo
+# RUN usermod -u $UID robot && groupmod -g $GID robot
+# # USER robot
+# # USER root
 RUN mkdir /home/robot
 
 # Muda o terminal shell para bash
 SHELL [ "/bin/bash" , "-c"]
 
 # cria e determina diretório da area de trabalho
-RUN mkdir /home/robot/ws_TCC
-WORKDIR /home/robot/ws_TCC
+RUN mkdir /home/robot/ws_aprendendo_ros2
+WORKDIR /home/robot/ws_aprendendo_ros2
 
 
 # instala dependências do projeto  
-# RUN cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
+RUN cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
     apt-utils \
@@ -39,8 +39,8 @@ RUN apt-get install -y --no-install-recommends \
     ros-$ROS_DISTRO-cartographer-ros \
     ros-$ROS_DISTRO-navigation2 \
     ros-$ROS_DISTRO-nav2-bringup \
-    ros-$ROS_DISTRO-tf-transformations \
-    ros-$ROS_DISTRO-turtlebot3*
+    ros-$ROS_DISTRO-tf-transformations 
+    # ros-$ROS_DISTRO-turtlebot3*
 
 RUN pip install setuptools==58.2.0
 RUN pip install transforms3d
@@ -58,27 +58,28 @@ RUN echo "bind-key -n C-Up select-pane -U"                                      
 RUN echo "bind-key -n C-Down select-pane -D"                                                >> ~/.tmux.conf
 RUN echo "bind -n M-Right split-window -h"                                                  >> ~/.tmux.conf
 RUN echo "bind -n M-Down split-window -v"                                                   >> ~/.tmux.conf
-RUN echo "bind C-c run 'tmux save-buffer - | xclip -i -sel clipboard'"                      >> ~/.tmux.conf
-RUN echo "bind C-v run 'tmux set-buffer '\$(xclip -o -sel clipboard)'; tmux paste-buffer'"   >> ~/.tmux.conf
+# RUN echo "bind C-c run 'tmux save-buffer - | xclip -i -sel clipboard'"                      >> ~/.tmux.conf
+# RUN echo "bind C-v run 'tmux set-buffer '\$(xclip -o -sel clipboard)'; tmux paste-buffer'"   >> ~/.tmux.conf
 
 # download modelos do gazebo 
-RUN git clone https://github.com/osrf/gazebo_models.git /home/robot/gazebo_models/
+# RUN git clone https://github.com/osrf/gazebo_models.git /home/robot/gazebo_models/
 
 # comandos carregados na inicialização dos containers
-RUN touch entrypoint.sh
-RUN echo "#!/bin/bash"                                  >> entrypoint.sh
-RUN echo "source /opt/ros/\${ROS_DISTRO}/setup.bash"    >> entrypoint.sh
-RUN echo "colcon build --symlink-install"               >> entrypoint.sh
-RUN echo "source install/setup.bash"                    >> entrypoint.sh
-RUN echo "exec \"\$@\""                                   >> entrypoint.sh
-RUN chmod +x entrypoint.sh
-ENTRYPOINT [ "/home/robot/ws_TCC/entrypoint.sh" ]
+# RUN touch entrypoint.sh
+# RUN echo "#!/bin/bash"                                  >> entrypoint.sh
+# RUN echo "source /opt/ros/\${ROS_DISTRO}/setup.bash"    >> entrypoint.sh
+# RUN echo "colcon build --symlink-install"               >> entrypoint.sh
+# RUN echo "source install/setup.bash"                    >> entrypoint.sh
+# RUN echo "exec \"\$@\""                                   >> entrypoint.sh
+# RUN chmod +x entrypoint.sh
+# ENTRYPOINT [ "/home/robot/ws_aprendendo_ros2/entrypoint.sh" ]
 
-USER robot
-
+# USER robot
 
 
 
 
 # ----------------------------------------------------------------
-# docker build -t lucasagostinho/tcc:latest .
+# docker build -t fagnerpimentel/aprendendo_ros2:latest .
+# docker login -u "myusername" -p "mypassword" docker.io
+# docker push fagnerpimentel/aprendendo_ros2:latest
