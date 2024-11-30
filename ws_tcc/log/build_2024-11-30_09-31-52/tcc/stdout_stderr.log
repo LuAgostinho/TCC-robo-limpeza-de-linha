@@ -1,0 +1,93 @@
+running egg_info
+creating ../../build/tcc/tcc.egg-info
+writing ../../build/tcc/tcc.egg-info/PKG-INFO
+writing dependency_links to ../../build/tcc/tcc.egg-info/dependency_links.txt
+writing entry points to ../../build/tcc/tcc.egg-info/entry_points.txt
+writing requirements to ../../build/tcc/tcc.egg-info/requires.txt
+writing top-level names to ../../build/tcc/tcc.egg-info/top_level.txt
+writing manifest file '../../build/tcc/tcc.egg-info/SOURCES.txt'
+reading manifest file '../../build/tcc/tcc.egg-info/SOURCES.txt'
+writing manifest file '../../build/tcc/tcc.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/lucas/ws_tcc/build/tcc/build
+creating /home/lucas/ws_tcc/build/tcc/build/lib
+creating /home/lucas/ws_tcc/build/tcc/build/lib/tcc
+copying tcc/__init__.py -> /home/lucas/ws_tcc/build/tcc/build/lib/tcc
+running install
+running install_lib
+creating /home/lucas/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc
+copying /home/lucas/ws_tcc/build/tcc/build/lib/tcc/__init__.py -> /home/lucas/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc
+byte-compiling /home/lucas/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/lucas/ws_tcc/install/tcc/share/ament_index
+creating /home/lucas/ws_tcc/install/tcc/share/ament_index/resource_index
+creating /home/lucas/ws_tcc/install/tcc/share/ament_index/resource_index/packages
+copying resource/tcc -> /home/lucas/ws_tcc/install/tcc/share/ament_index/resource_index/packages
+copying package.xml -> /home/lucas/ws_tcc/install/tcc/share/tcc
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/config
+copying config/Default.perspective -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/config/map
+copying config/map/checkpoints.json -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/map
+copying config/map/map.yaml -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/map
+copying config/map/map.pgm -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/map
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/config/nav
+copying config/nav/ekf.yaml -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/nav
+copying config/nav/nav2_params.yaml -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/nav
+copying config/nav/cartographer.lua -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/nav
+copying config/nav/slam_toolbox.yaml -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/nav
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/config/rviz
+copying config/rviz/mapping_cartographer.rviz -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/rviz
+copying config/rviz/mapping_slam_toolbox.rviz -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/rviz
+copying config/rviz/robot.rviz -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/rviz
+copying config/rviz/navigation.rviz -> /home/lucas/ws_tcc/install/tcc/share/tcc/config/rviz
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/launch
+copying launch/simulation.launch.py -> /home/lucas/ws_tcc/install/tcc/share/tcc/launch/
+copying launch/navigation.launch.py -> /home/lucas/ws_tcc/install/tcc/share/tcc/launch/
+copying launch/load.launch.py -> /home/lucas/ws_tcc/install/tcc/share/tcc/launch/
+copying launch/mapping_cartographer.launch.py -> /home/lucas/ws_tcc/install/tcc/share/tcc/launch/
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/simulation
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/worlds
+copying simulation/worlds/simple_room.world -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/worlds
+copying simulation/worlds/simple_room_with_fixed_boxes.world -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/worlds
+copying simulation/worlds/empty.world -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/worlds
+copying simulation/worlds/linha.world -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/worlds
+copying simulation/worlds/simple_room_with_random_boxes.world -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/worlds
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models
+copying simulation/models/model.config -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models
+copying simulation/models/model.sdf -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/r2d2
+copying simulation/models/r2d2/model.config -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/r2d2
+copying simulation/models/r2d2/model.sdf -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/r2d2
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/simple_room
+copying simulation/models/simple_room/model.config -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/simple_room
+copying simulation/models/simple_room/model.sdf -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/simple_room
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/wood_square
+copying simulation/models/wood_square/model.config -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/wood_square
+copying simulation/models/wood_square/model.sdf -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/wood_square
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/box
+copying simulation/models/box/model.config -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/box
+copying simulation/models/box/model.sdf -> /home/lucas/ws_tcc/install/tcc/share/tcc/simulation/models/box
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/urdf
+copying urdf/robot.urdf -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/
+copying urdf/reserva.urdf -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/
+copying urdf/robot.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/macros
+copying urdf/macros/properties.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/macros
+copying urdf/macros/link_geometry.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/macros
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/macros/parts
+copying urdf/macros/parts/wheel.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/macros/parts
+copying urdf/macros/parts/base.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/macros/parts
+creating /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/simulation
+copying urdf/simulation/imu.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/simulation
+copying urdf/simulation/gazebo_base.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/simulation
+copying urdf/simulation/gazebo_camera.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/simulation
+copying urdf/simulation/gazebo_laser.urdf.xacro -> /home/lucas/ws_tcc/install/tcc/share/tcc/urdf/simulation
+running install_egg_info
+Copying ../../build/tcc/tcc.egg-info to /home/lucas/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc-0.0.0-py3.10.egg-info
+running install_scripts
+Installing checkpoints script to /home/lucas/ws_tcc/install/tcc/lib/tcc
+Installing no_com_classe script to /home/lucas/ws_tcc/install/tcc/lib/tcc
+Installing no_simples script to /home/lucas/ws_tcc/install/tcc/lib/tcc
+Installing r2d2 script to /home/lucas/ws_tcc/install/tcc/lib/tcc
+writing list of installed files to '/home/lucas/ws_tcc/build/tcc/install.log'

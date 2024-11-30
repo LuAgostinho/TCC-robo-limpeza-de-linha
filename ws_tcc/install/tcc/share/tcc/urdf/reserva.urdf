@@ -1,0 +1,557 @@
+<?xml version="1.0"?>
+<robot name="garcom">
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    <material name="Cyan">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+    </material>
+
+  <!-- LINKS -->
+
+  <link name="base_footprint">
+  </link>
+
+  <link name="base">
+    <visual>
+      <geometry>
+        <cylinder length="0.4" radius="0.2"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.4" radius="0.2"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0.023333" ixy="0.0" ixz="0.0" iyy="0.023333" iyz="0.0" izz="0.02"/>
+    </inertial>  
+  </link>
+
+  <link name="base_scan">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.2"/>
+      </geometry>
+      <material name="Cyan">
+      </material>
+      </visual>
+      <collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.2"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0.02" ixy="0.0" ixz="0.0" iyy="0.02" iyz="0.0" izz="0.02"/>
+    </inertial>
+  </link>
+
+  <link name="torso">
+    <visual>
+      <geometry>
+        <cylinder length="0.4" radius="0.2"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.2"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0.0175" ixy="0.0" ixz="0.0" iyy="0.0175" iyz="0.0" izz="0.02"/>
+    </inertial>  
+  </link>
+
+  <link name="left_wheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.075"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.075"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.25"/>
+      <inertia ixx="0.000563" ixy="0.0" ixz="0.0" iyy="0.000563" iyz="0.0" izz="0.000563"/>
+    </inertial> 
+  </link>
+
+  <link name="right_wheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.075"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.075"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.25"/>
+      <inertia ixx="0.000563" ixy="0.0" ixz="0.0" iyy="0.000563" iyz="0.0" izz="0.000563"/>
+    </inertial> 
+  </link>
+
+  <link name="front_wheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.075"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.075"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.25"/>
+      <inertia ixx="0.000563" ixy="0.0" ixz="0.0" iyy="0.000563" iyz="0.0" izz="0.000563"/>
+    </inertial> 
+  </link>
+
+  <link name="plate_bottom">
+    <visual>
+      <geometry>
+        <cylinder length="0.02" radius="0.2"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.2"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0.010033333" ixy="0.0" ixz="0.0" iyy="0.010033333" iyz="0.0" izz="0.02"/>
+    </inertial>
+  </link>
+
+  <link name="plate_middle">
+    <visual>
+      <geometry>
+        <cylinder length="0.02" radius="0.2"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.2"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0.010033333" ixy="0.0" ixz="0.0" iyy="0.010033333" iyz="0.0" izz="0.02"/>
+    </inertial>
+  </link>
+
+  <link name="plate_top">
+    <visual>
+      <geometry>
+        <cylinder length="0.02" radius="0.2"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.2"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0.010033333" ixy="0.0" ixz="0.0" iyy="0.010033333" iyz="0.0" izz="0.02"/>
+    </inertial>
+  </link>
+
+  <link name="holder_1">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,003433333" ixy="0.0" ixz="0.0" iyy="0,003433333" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="holder_2">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,003433333" ixy="0.0" ixz="0.0" iyy="0,003433333" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="holder_3">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,003433333" ixy="0.0" ixz="0.0" iyy="0,003433333" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="holder_4">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,003433333" ixy="0.0" ixz="0.0" iyy="0,003433333" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="holder_5">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,003433333" ixy="0.0" ixz="0.0" iyy="0,003433333" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="holder_6">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,003433333" ixy="0.0" ixz="0.0" iyy="0,003433333" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="holder_7">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,003433333" ixy="0.0" ixz="0.0" iyy="0,003433333" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="holder_8">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.02"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,003433333" ixy="0.0" ixz="0.0" iyy="0,003433333" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+  
+  <link name="screen_front">
+    <visual>
+      <geometry>
+        <box size="0.05 0.2 0.2"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <box size="0.05 0.2 0.2"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,006666667" ixy="0.0" ixz="0.0" iyy="0,003541667" iyz="0.0" izz="0,003541667"/>
+    </inertial>
+  </link>
+
+  <link name="screen_back">
+    <visual>
+      <geometry>
+        <box size="0.05 0.2 0.2"/>
+      </geometry>
+    </visual>
+	<collision>
+      <geometry>
+        <box size="0.05 0.2 0.2"/>
+      </geometry>
+    </collision>
+	<inertial>
+      <mass value="1"/>
+      <inertia ixx="0,006666667" ixy="0.0" ixz="0.0" iyy="0,003541667" iyz="0.0" izz="0,003541667"/>
+    </inertial>
+  </link>
+
+  <!-- JOINTS -->
+
+  <joint name="joint_base_footprint_to_base" type="fixed">
+    <origin xyz="0 0 0.33" rpy="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="base"/>
+  </joint>
+
+
+  <joint name="joint_base_to_base_scan" type="fixed">
+    <origin xyz="0 0 0.3" rpy="0 0 0"/>
+    <parent link="base"/>
+    <child link="base_scan"/>
+  </joint>
+
+  <joint name="joint_base_scan_to_torso" type="fixed">
+    <origin xyz="0 0 0.25" rpy="0 0 0"/>
+    <parent link="base_scan"/>
+    <child link="torso"/>
+  </joint>
+
+  <joint name="joint_torso_to_plate_bottom" type="fixed">
+    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    <parent link="torso"/>
+    <child link="plate_bottom"/>
+  </joint>
+
+  <joint name="joint_plate_bottom_to_holder_1" type="fixed">
+    <origin xyz="0.12 0.12 0.11" rpy="0 0 0"/>
+    <parent link="plate_bottom"/>
+    <child link="holder_1"/>
+  </joint>
+
+  <joint name="joint_plate_bottom_to_holder_2" type="fixed">
+    <origin xyz="-0.12 -0.12 0.11" rpy="0 0 0"/>
+    <parent link="plate_bottom"/>
+    <child link="holder_2"/>
+  </joint>
+
+  <joint name="joint_plate_bottom_to_holder_3" type="fixed">
+    <origin xyz="-0.12 0.12 0.11" rpy="0 0 0"/>
+    <parent link="plate_bottom"/>
+    <child link="holder_3"/>
+  </joint>
+
+  <joint name="joint_plate_bottom_to_holder_4" type="fixed">
+    <origin xyz="0.12 -0.12 0.11" rpy="0 0 0"/>
+    <parent link="plate_bottom"/>
+    <child link="holder_4"/>
+  </joint>
+
+  <joint name="joint_holder_1_to_plate_middle" type="fixed">
+    <origin xyz="-0.12 -0.12 0.11" rpy="0 0 0"/>
+    <parent link="holder_1"/>
+    <child link="plate_middle"/>
+  </joint>
+
+  <joint name="joint_holder_2_to_plate_middle" type="fixed">
+    <origin xyz="0.12 0.12 0.11" rpy="0 0 0"/>
+    <parent link="holder_2"/>
+    <child link="plate_middle"/>
+  </joint>
+
+  <joint name="joint_holder_3_to_plate_middle" type="fixed">
+    <origin xyz="0.12 -0.12 0.11" rpy="0 0 0"/>
+    <parent link="holder_3"/>
+    <child link="plate_middle"/>
+  </joint>
+
+  <joint name="joint_holder_4_to_plate_middle" type="fixed">
+    <origin xyz="-0.12 0.12 0.11" rpy="0 0 0"/>
+    <parent link="holder_4"/>
+    <child link="plate_middle"/>
+  </joint>
+
+    <joint name="joint_plate_middle_to_holder_5" type="fixed">
+    <origin xyz="0.12 0.12 0.11" rpy="0 0 0"/>
+    <parent link="plate_middle"/>
+    <child link="holder_5"/>
+  </joint>
+
+  <joint name="joint_plate_middle_to_holder_6" type="fixed">
+    <origin xyz="-0.12 -0.12 0.11" rpy="0 0 0"/>
+    <parent link="plate_middle"/>
+    <child link="holder_6"/>
+  </joint>
+
+  <joint name="joint_plate_middle_to_holder_7" type="fixed">
+    <origin xyz="-0.12 0.12 0.11" rpy="0 0 0"/>
+    <parent link="plate_middle"/>
+    <child link="holder_7"/>
+  </joint>
+
+  <joint name="joint_plate_middle_to_holder_8" type="fixed">
+    <origin xyz="0.12 -0.12 0.11" rpy="0 0 0"/>
+    <parent link="plate_middle"/>
+    <child link="holder_8"/>
+  </joint>
+
+    <joint name="joint_holder_5_to_plate_top" type="fixed">
+    <origin xyz="-0.12 -0.12 0.11" rpy="0 0 0"/>
+    <parent link="holder_5"/>
+    <child link="plate_top"/>
+  </joint>
+
+  <joint name="joint_holder_6_to_plate_top" type="fixed">
+    <origin xyz="0.12 0.12 0.11" rpy="0 0 0"/>
+    <parent link="holder_6"/>
+    <child link="plate_top"/>
+  </joint>
+
+  <joint name="joint_holder_7_to_plate_top" type="fixed">
+    <origin xyz="0.12 -0.12 0.11" rpy="0 0 0"/>
+    <parent link="holder_7"/>
+    <child link="plate_top"/>
+  </joint>
+
+  <joint name="joint_holder_8_to_plate_top" type="fixed">
+    <origin xyz="-0.12 0.12 0.11" rpy="0 0 0"/>
+    <parent link="holder_8"/>
+    <child link="plate_top"/>
+  </joint>
+
+  <joint name="joint_plate_top_to_screen_front" type="fixed">
+    <origin xyz="0.18 0 0.02" rpy="0 0 0"/>
+    <parent link="plate_top"/>
+    <child link="screen_front"/>
+  </joint>
+
+  <joint name="joint_plate_top_to_screen_back" type="fixed">
+    <origin xyz="-0.18 0 0.02" rpy="0 0 0"/>
+    <parent link="plate_top"/>
+    <child link="screen_back"/>
+  </joint>
+
+  <joint name="joint_base_to_right_wheel" type="continuous">
+    <origin xyz="-0.09 0.09 -0.25" rpy="0 0 0"/>
+    <parent link="base"/>
+    <child link="right_wheel"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="joint_base_to_left_wheel" type="continuous">
+    <origin xyz="-0.09 -0.09 -0.25" rpy="0 0 0"/>
+    <parent link="base"/>
+    <child link="left_wheel"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+<joint name="joint_base_to_front_wheel" type="fixed">
+    <origin xyz="0.09 0 -0.25" rpy="0 0 0"/>
+    <parent link="base"/>
+    <child link="front_wheel"/>
+  </joint>
+
+<gazebo reference="base_scan">
+    <sensor name="base_scan" type="ray">
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>180</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-1.57</min_angle>
+            <max_angle>1.57</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.5</min>
+          <max>30.0</max>
+          <resolution>0.015000</resolution>
+        </range>
+      </ray>
+      <always_on>true</always_on>
+      <update_rate>100.0</update_rate>
+      <visualize>true</visualize>            
+      <plugin name="laserscan" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+      <gazebo>
+      <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+        <ros>
+          <!-- <namespace>/garcom</namespace> -->
+          <!-- <remapping>cmd_vel:=cmd_vel</remapping> -->
+          <!-- <remapping>odom:=odom</remapping> -->
+        </ros>
+        <update_rate>30</update_rate>
+        <command_topic>cmd_vel</command_topic>
+
+        <!-- wheels -->
+        <left_joint>joint_base_to_left_wheel</left_joint>
+        <right_joint>joint_base_to_right_wheel</right_joint>
+
+        <!-- kinematics -->
+        <wheel_separation>0.015</wheel_separation>
+        <wheel_diameter>0.075</wheel_diameter>
+
+        <!-- limits -->
+        <max_wheel_torque>20</max_wheel_torque>
+        <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+        <!-- output -->
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>true</publish_odom_tf>
+        <publish_wheel_tf>false</publish_wheel_tf>
+        <odometry_topic>odom</odometry_topic>
+        <odometry_frame>odom</odometry_frame>
+        <robot_base_frame>base_footprint</robot_base_frame>
+      </plugin>
+  </gazebo>
+
+
+
+</robot>
