@@ -49,6 +49,15 @@ def generate_launch_description():
                 'params_file': [get_package_share_directory('tcc'),'/config/nav/nav2_params.yaml']
              }.items(),
     )
+    
+    checkpoint = Node(
+        package='tcc',
+        executable='checkpoints_test',
+        name='checkpoints_test',
+        parameters=[{
+            'checkpoints_file': get_package_share_directory('tcc')+'/config/map/checkpoints.json'
+        }],
+    )
 
 
     ld = LaunchDescription()
@@ -57,5 +66,6 @@ def generate_launch_description():
     ld.add_action(robot)
     # ld.add_action(slam_toobox)
     ld.add_action(nav2)
+    ld.add_action(checkpoint)
 
     return ld
