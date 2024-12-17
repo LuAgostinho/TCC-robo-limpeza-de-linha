@@ -52,8 +52,8 @@ def generate_launch_description():
     
     checkpoint = Node(
         package='tcc',
-        executable='checkpoints_test',
-        name='checkpoints_test',
+        executable='checkpoints',
+        name='checkpoints',
         parameters=[{
             'checkpoints_file': get_package_share_directory('tcc')+'/config/map/checkpoints.json'
         }],

@@ -42,6 +42,7 @@ class Checkpoints(Node):
             goal_msg.poses = poses
             self._action_client.wait_for_server()
             self.goal_handle = self._action_client.send_goal_async(goal_msg)
+            
 
             response.success = True
             response.message = "Success"
