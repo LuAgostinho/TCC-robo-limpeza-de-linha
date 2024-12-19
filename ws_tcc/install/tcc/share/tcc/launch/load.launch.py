@@ -91,24 +91,15 @@ def generate_launch_description():
 
     )
 
-    teleop = Node(
-        name='teleop_twist_keyboard',
-        package='teleop_twist_keyboard',
-        executable='teleop_twist_keyboard',
-        output='log',
-        prefix=["xterm -hold -e"],
-        remappings=[
-            # ('/cmd_vel', '/demo/cmd_vel'),
-        ],
-        arguments=['--ros-args', '--log-level', LaunchConfiguration('log_level')]
-    )
-
     spawn_entity = Node(
     	package='gazebo_ros', 
     	executable='spawn_entity.py',
         arguments=[
             '-entity', 'sam_bot', 
             '-topic', 'robot_description', 
+            '-x', '3.2',
+            '-y', '1.2',
+            '-Y', '3.14',
             '--ros-args', '--log-level', LaunchConfiguration('log_level')]
     )
 
@@ -135,6 +126,5 @@ def generate_launch_description():
         robot_state_publisher_node,
         spawn_entity,
         # robot_localization_node,
-        rviz_node,
-        teleop
+        rviz_node
     ])

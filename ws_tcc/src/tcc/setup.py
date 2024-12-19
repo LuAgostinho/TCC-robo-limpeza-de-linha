@@ -39,7 +39,6 @@ setup(
     entry_points={
         'console_scripts': [
             'checkpoints = tcc.checkpoints:main',
-            'checkpoints_test = tcc.checkpoints_test:main',
         ],
     },
 )

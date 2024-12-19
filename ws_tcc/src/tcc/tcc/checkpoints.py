@@ -1,73 +1,51 @@
+#!/usr/bin/env python3
 import rclpy
-from rclpy.action import ActionClient
-from rclpy.node import Node
-
-from nav2_msgs.action import FollowWaypoints
+from nav2_simple_commander.robot_navigator import BasicNavigator
 from geometry_msgs.msg import PoseStamped
-from std_srvs.srv import Trigger
-import json
+import tf_transformations
 
-class Checkpoints(Node):
+def main():
+    #init
+    rclpy.init()
+    nav = BasicNavigator()
 
-    def __init__(self):
-        super().__init__('checkpoints')
-        self.goal_handle = None
-        self._action_client = ActionClient(self, FollowWaypoints, '/follow_waypoints')
-        self.srv_start = self.create_service(Trigger, '/start', self.start_callback)
-        self.srv_cancel = self.create_service(Trigger, '/cancel', self.cancel_callback)
-        self.declare_parameter('checkpoints_file', '')
+    #Set initial pose
+    q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, 3.14)
+    initial_pose = PoseStamped()
+    initial_pose.header.frame_id = 'map'
+    initial_pose.header.stamp = nav.get_clock().now().to_msg()
+    initial_pose.pose.position.x = 3.2
+    initial_pose.pose.position.y = 1.2
+    initial_pose.pose.position.z = 0.0
+    initial_pose.pose.orientation.x = q_x
+    initial_pose.pose.orientation.y = q_y
+    initial_pose.pose.orientation.z = q_z
+    initial_pose.pose.orientation.w = q_w
+    nav.setInitialPose(initial_pose)
 
-    def start_callback(self, request, response):
+    #Wait for Nav2
+    nav.waitUntilNav2Active()
 
-        try:
-            checkpoints_file = self.get_parameter('checkpoints_file').get_parameter_value().string_value
+    #Send Nav2 goal
+    q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, 3.14)
+    goal_pose = PoseStamped()
+    goal_pose.header.frame_id = 'map'
+    goal_pose.header.stamp = nav.get_clock().now().to_msg()
+    goal_pose.pose.position.x = 2.2
+    goal_pose.pose.position.y = 1.2
+    goal_pose.pose.position.z = 0.0
+    goal_pose.pose.orientation.x = q_x
+    goal_pose.pose.orientation.y = q_y
+    goal_pose.pose.orientation.z = q_z
+    goal_pose.pose.orientation.w = q_w
+    nav.goToPose(goal_pose)
 
-            f = open(checkpoints_file)
-            data = json.load(f)
+    while not nav.isTaskComplete():
+        feedback = nav.getFeedback()
+        #print(feedback)
 
-            poses = []
-            for i in data['poses']:
-                p = PoseStamped()
-                p.header.frame_id = data['frame_id']
-                p.pose.position.x = i['position']['x']
-                p.pose.position.y = i['position']['y']
-                p.pose.position.z = i['position']['z']
-                p.pose.orientation.x = i['orientation']['x']
-                p.pose.orientation.y = i['orientation']['y']
-                p.pose.orientation.z = i['orientation']['z']
-                p.pose.orientation.w = i['orientation']['w']
-                poses.append(p)
-
-            goal_msg = FollowWaypoints.Goal()
-            goal_msg.poses = poses
-            self._action_client.wait_for_server()
-            self.goal_handle = self._action_client.send_goal_async(goal_msg)
-            
-
-            response.success = True
-            response.message = "Success"
-            return response
-        except FileNotFoundError as e:
-            self.get_logger().error (f"{e}")
-            response.success = False
-            response.message = f"{e}"
-            return response
-
-
-    def cancel_callback(self, request, response):
-        self.goal_handle.result().cancel_goal_async()
-
-        response.success = True
-        response.message = "Success"
-        return response
-
-def main(args=None):
-    rclpy.init(args=args)
-
-    action_client = Checkpoints()
-    rclpy.spin(action_client)
-
-
+    #Shutdown
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

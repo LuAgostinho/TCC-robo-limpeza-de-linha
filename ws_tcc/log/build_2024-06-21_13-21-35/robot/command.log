@@ -1,6 +1,0 @@
-Invoking command in '/home/lucas/ws_navtech/build/robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lucas/ws_navtech/src/navtech/robot -DCMAKE_INSTALL_PREFIX=/home/lucas/ws_navtech/install/robot
-Invoked command in '/home/lucas/ws_navtech/build/robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lucas/ws_navtech/src/navtech/robot -DCMAKE_INSTALL_PREFIX=/home/lucas/ws_navtech/install/robot
-Invoking command in '/home/lucas/ws_navtech/build/robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lucas/ws_navtech/build/robot -- -j16 -l16
-Invoked command in '/home/lucas/ws_navtech/build/robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lucas/ws_navtech/build/robot -- -j16 -l16
-Invoking command in '/home/lucas/ws_navtech/build/robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lucas/ws_navtech/build/robot
-Invoked command in '/home/lucas/ws_navtech/build/robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lucas/ws_navtech/build/robot
