@@ -39,6 +39,7 @@ setup(
     entry_points={
         'console_scripts': [
             'checkpoints_to_follow = tcc.checkpoints_to_follow:main',
+            'set_initial_pose = tcc.set_initial_pose:main',
         ],
     },
 )

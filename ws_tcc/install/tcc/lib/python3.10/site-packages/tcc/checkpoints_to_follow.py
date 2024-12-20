@@ -9,21 +9,17 @@ class checkpoints_to_follow(Node):
 
     def __init__(self):
         super().__init__('checkpoints_to_follow')
-
+        
         self.navigator = BasicNavigator()
 
-        initial_pose = self.create_pose_stamped(3.2, 1.1, 3.14)
-        self.navigator.setInitialPose(initial_pose)
 
-        self.navigator.waitUntilNav2Active()
-
-        self.goal_pose1 = self.create_pose_stamped(2.2, 1.2, 3.14)
-        self.goal_pose2 = self.create_pose_stamped(2.2, 0.2, 3.14)
+        self.goal_pose1 = self.create_pose_stamped(2.0, 1.1, 3.14)
+        self.goal_pose2 = self.create_pose_stamped(2.2, 1.2, 3.14)
         self.goal_pose3 = self.create_pose_stamped(1.2, 1.2, 3.14)
 
         self.follow_waypoints()
 
-        self.go_to_waypoint()
+        #self.go_to_waypoint()
 
     def create_pose_stamped(navigator: BasicNavigator, position_x, position_y, orientation_z):
         q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, orientation_z)
@@ -56,7 +52,7 @@ class checkpoints_to_follow(Node):
             feedback = self.navigator.getFeedback()
             self.get_logger().info(f"Feedback: {feedback}")
         result = self.navigator.getResult()
-        self.get_logger().info(f"Task completed with status: {result.status}")
+        self.get_logger().info(f"Task completed with status: {result}")
 
 def main(args=None):
     #init

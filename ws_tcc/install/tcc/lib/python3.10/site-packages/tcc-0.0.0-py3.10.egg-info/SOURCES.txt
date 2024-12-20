@@ -42,6 +42,7 @@ simulation/worlds/simple_room_with_fixed_boxes.world
 simulation/worlds/simple_room_with_random_boxes.world
 tcc/__init__.py
 tcc/checkpoints_to_follow.py
+tcc/set_initial_pose.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

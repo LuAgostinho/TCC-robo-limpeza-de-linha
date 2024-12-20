@@ -63,6 +63,6 @@ def generate_launch_description():
     ld.add_action(robot)
     # ld.add_action(slam_toobox)
     ld.add_action(nav2)
-    ld.add_action(checkpoint)
+    #ld.add_action(checkpoint)
 
     return ld
