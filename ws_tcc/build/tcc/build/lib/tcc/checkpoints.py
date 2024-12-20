@@ -1,51 +1,76 @@
 #!/usr/bin/env python3
 import rclpy
+from rclpy.node import Node
 from nav2_simple_commander.robot_navigator import BasicNavigator
 from geometry_msgs.msg import PoseStamped
 import tf_transformations
 
-def main():
-    #init
-    rclpy.init()
-    nav = BasicNavigator()
+class checkpoint(Node):
 
-    #Set initial pose
-    q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, 3.14)
-    initial_pose = PoseStamped()
-    initial_pose.header.frame_id = 'map'
-    initial_pose.header.stamp = nav.get_clock().now().to_msg()
-    initial_pose.pose.position.x = 3.2
-    initial_pose.pose.position.y = 1.2
-    initial_pose.pose.position.z = 0.0
-    initial_pose.pose.orientation.x = q_x
-    initial_pose.pose.orientation.y = q_y
-    initial_pose.pose.orientation.z = q_z
-    initial_pose.pose.orientation.w = q_w
-    nav.setInitialPose(initial_pose)
+    def __init__(self):
+        super().__init__('checkpoints_to_follow')
 
-    #Wait for Nav2
-    nav.waitUntilNav2Active()
+        self.navigator = BasicNavigator()
 
-    #Send Nav2 goal
-    q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, 3.14)
-    goal_pose = PoseStamped()
-    goal_pose.header.frame_id = 'map'
-    goal_pose.header.stamp = nav.get_clock().now().to_msg()
-    goal_pose.pose.position.x = 2.2
-    goal_pose.pose.position.y = 1.2
-    goal_pose.pose.position.z = 0.0
-    goal_pose.pose.orientation.x = q_x
-    goal_pose.pose.orientation.y = q_y
-    goal_pose.pose.orientation.z = q_z
-    goal_pose.pose.orientation.w = q_w
-    nav.goToPose(goal_pose)
+        initial_pose = self.create_pose_stamped(3.2, 1.1, 3.14)
+        self.navigator.setInitialPose(initial_pose)
 
-    while not nav.isTaskComplete():
-        feedback = nav.getFeedback()
-        print(feedback)
+        self.navigator.waitUntilNav2Active()
 
-    #Shutdown
-    rclpy.shutdown()
+        self.goal_pose1 = self.create_pose_stamped(2.2, 1.2, 3.14)
+        self.goal_pose2 = self.create_pose_stamped(2.2, 0.2, 3.14)
+        self.goal_pose3 = self.create_pose_stamped(1.2, 1.2, 3.14)
 
-if __name__ == '__main__':
-    main()
+        self.follow_waypoints()
+
+        self.go_to_waypoint()
+
+    def create_pose_stamped(navigator: BasicNavigator, position_x, position_y, orientation_z):
+        q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, orientation_z)
+        pose = PoseStamped()
+        pose.header.frame_id = 'map'
+        pose.header.stamp = navigator.get_clock().now().to_msg()
+        pose.pose.position.x = position_x
+        pose.pose.position.y = position_y
+        pose.pose.position.z = 0.0
+        pose.pose.orientation.x = q_x
+        pose.pose.orientation.y = q_y
+        pose.pose.orientation.z = q_z
+        pose.pose.orientation.w= q_w
+        return pose
+
+    def follow_waypoints(self):
+        waypoints = [self.goal_pose1, self.goal_pose2, self.goal_pose3]
+        self.get_logger().info("Following waypoints...")
+        self.navigator.followWaypoints(waypoints)
+        self.check_task_complete()
+
+    def go_to_waypoint(self):
+        self.get_logger().info("Navigating to goal 1...")
+        self.navigator.goToPose(self.goal_pose1)
+        self.check_task_complete()
+
+    def check_task_complete(self):
+        """Check if the navigation task is complete"""
+        while not self.navigator.isTaskComplete():
+            feedback = self.navigator.getFeedback()
+            self.get_logger().info(f"Feedback: {feedback}")
+        result = self.navigator.getResult()
+        self.get_logger().info(f"Task completed with status: {result.status}")
+
+    def main(args=None):
+        #init
+        rclpy.init(args=args)
+        node = checkpoints()
+
+        try:
+            rclpy.spin(node)
+        except KeyboardInterrupt:
+            pass
+        finally:
+            # Shutdown node
+            node.navigator.getLogger().info("Shutting down checkpoint node...")
+            rclpy.shutdown()
+
+    if __name__ == '__main__':
+        main()

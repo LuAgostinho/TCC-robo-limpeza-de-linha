@@ -20,7 +20,6 @@ config/rviz/mapping_cartographer.rviz
 config/rviz/mapping_slam_toolbox.rviz
 config/rviz/navigation.rviz
 config/rviz/robot.rviz
-launch/checkpoints_to_follow.launch.py
 launch/load.launch.py
 launch/mapping_cartographer.launch.py
 launch/navigation.launch.py
@@ -42,7 +41,7 @@ simulation/worlds/simple_room.world
 simulation/worlds/simple_room_with_fixed_boxes.world
 simulation/worlds/simple_room_with_random_boxes.world
 tcc/__init__.py
-tcc/checkpoints.py
+tcc/checkpoints_to_follow.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

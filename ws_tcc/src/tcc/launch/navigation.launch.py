@@ -10,7 +10,7 @@ def generate_launch_description():
 
     log_level = DeclareLaunchArgument(
         name='log_level', 
-        default_value='INFO', 
+        default_value='ERROR', 
         choices=['DEBUG','INFO','WARN','ERROR','FATAL'],
         description='Flag to set log level')
 
@@ -52,11 +52,8 @@ def generate_launch_description():
     
     checkpoint = Node(
         package='tcc',
-        executable='checkpoints',
-        name='checkpoints',
-        parameters=[{
-            'checkpoints_file': get_package_share_directory('tcc')+'/config/map/checkpoints.json'
-        }],
+        executable='checkpoints_to_follow',
+        name='checkpoints_to_follow',
     )
 
 

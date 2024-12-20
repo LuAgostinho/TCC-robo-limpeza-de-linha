@@ -36,7 +36,7 @@ def generate_launch_description():
 
     log_level = DeclareLaunchArgument(
         name='log_level', 
-        default_value='INFO', 
+        default_value='ERROR', 
         choices=['DEBUG','INFO','WARN','ERROR','FATAL'],
         description='Flag to set log level'
     )
@@ -98,7 +98,7 @@ def generate_launch_description():
             '-entity', 'sam_bot', 
             '-topic', 'robot_description', 
             '-x', '3.2',
-            '-y', '1.2',
+            '-y', '1.1',
             '-Y', '3.14',
             '--ros-args', '--log-level', LaunchConfiguration('log_level')]
     )
