@@ -13,9 +13,9 @@ class checkpoints_to_follow(Node):
         self.navigator = BasicNavigator()
 
 
-        self.goal_pose1 = self.create_pose_stamped(2.0, 1.1, 3.14)
-        self.goal_pose2 = self.create_pose_stamped(2.2, 1.2, 3.14)
-        self.goal_pose3 = self.create_pose_stamped(1.2, 1.2, 3.14)
+        self.goal_pose1 = self.create_pose_stamped(2.0, 1.0, 3.14)
+        self.goal_pose2 = self.create_pose_stamped(1.0, 1.0, 3.14)
+        self.goal_pose3 = self.create_pose_stamped(-2.0, 1.0, 3.14)
 
         self.follow_waypoints()
 
@@ -52,7 +52,6 @@ class checkpoints_to_follow(Node):
             feedback = self.navigator.getFeedback()
             self.get_logger().info(f"Feedback: {feedback}")
         result = self.navigator.getResult()
-        self.get_logger().info(f"Task completed with status: {result}")
 
 def main(args=None):
     #init
