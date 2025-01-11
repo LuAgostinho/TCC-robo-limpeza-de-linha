@@ -17,7 +17,11 @@ class checkpoints_to_follow(Node):
         self.goal_pose2 = self.create_pose_stamped(0.95, 1.0, 3.14)
         self.goal_pose3 = self.create_pose_stamped(-0.85, 1.15, 3.14)
         self.goal_pose4 = self.create_pose_stamped(-3.0, 1.25, 0.0)
-        self.goal_pose5 = self.create_pose_stamped(3.1, 0.5, 4.17)
+        self.goal_pose5 = self.create_pose_stamped(2.35, 0.5, 0.0)
+        self.goal_pose6 = self.create_pose_stamped(3.1, 0.5, 3.14)
+        self.goal_pose7 = self.create_pose_stamped(-2.6, 0.7, 3.14)
+        self.goal_pose8 = self.create_pose_stamped(-3.0, 0.5, 0.0)
+        
 
         self.follow_waypoints()
 
@@ -38,7 +42,7 @@ class checkpoints_to_follow(Node):
         return pose
 
     def follow_waypoints(self):
-        waypoints = [self.goal_pose0 ,self.goal_pose1,self.goal_pose2 ,self.goal_pose3, self.goal_pose4, self.goal_pose5]
+        waypoints = [self.goal_pose0 ,self.goal_pose1,self.goal_pose2 ,self.goal_pose3, self.goal_pose4, self.goal_pose5, self.goal_pose6, self.goal_pose7, self.goal_pose8]
         self.get_logger().info("Following waypoints...")
         self.navigator.followWaypoints(waypoints)
         self.check_task_complete()
