@@ -39,8 +39,8 @@ amcl:
     z_short: 0.05
     scan_topic: scan
     set_initial_pose: True
-    initial_pose_x: 3.2
-    initial_pose_y: 1.15
+    initial_pose_x: 3.1
+    initial_pose_y: 1.05
     initial_pose_a: 3.14
     
 bt_navigator:

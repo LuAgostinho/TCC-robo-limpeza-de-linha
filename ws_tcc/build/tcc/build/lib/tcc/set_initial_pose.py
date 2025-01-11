@@ -12,7 +12,7 @@ class set_initial_pose(Node):
 
         self.navigator = BasicNavigator()
 
-        initial_pose = self.create_pose_stamped(3.2, 1.15, 3.14)
+        initial_pose = self.create_pose_stamped(3.1, 1.05, 3.14)
         self.navigator.setInitialPose(initial_pose)
 
         self.navigator.waitUntilNav2Active()

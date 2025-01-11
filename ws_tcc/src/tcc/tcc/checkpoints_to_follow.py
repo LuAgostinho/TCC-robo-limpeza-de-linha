@@ -15,8 +15,8 @@ class checkpoints_to_follow(Node):
         self.goal_pose0 = self.create_pose_stamped(2.2, 1.05, 3.14)
         self.goal_pose1 = self.create_pose_stamped(1.2, 1.0, 3.14)
         self.goal_pose2 = self.create_pose_stamped(0.95, 1.0, 3.14)
-        self.goal_pose3 = self.create_pose_stamped(-0.8, 1.2, 3.14)
-        self.goal_pose4 = self.create_pose_stamped(-3.0, 1.25, 3.14)
+        self.goal_pose3 = self.create_pose_stamped(-0.85, 1.15, 3.14)
+        self.goal_pose4 = self.create_pose_stamped(-3.0, 1.25, 0.0)
 
         self.follow_waypoints()
 
