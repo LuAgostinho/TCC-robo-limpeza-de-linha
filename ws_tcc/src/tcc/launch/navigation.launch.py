@@ -50,10 +50,10 @@ def generate_launch_description():
              }.items(),
     )
     
-    checkpoint = Node(
+    pose = Node(
         package='tcc',
-        executable='checkpoints_to_follow',
-        name='checkpoints_to_follow',
+        executable='set_initial_pose',
+        name='set_initial_pose',
     )
 
 
@@ -63,6 +63,6 @@ def generate_launch_description():
     ld.add_action(robot)
     # ld.add_action(slam_toobox)
     ld.add_action(nav2)
-    #ld.add_action(checkpoint)
+    ld.add_action(pose)
 
     return ld

@@ -166,7 +166,7 @@ controller_server:
       linear_granularity: 0.05
       angular_granularity: 0.025
       transform_tolerance: 0.2
-      xy_goal_tolerance: 0.05
+      xy_goal_tolerance: 0.2
       trans_stopped_velocity: 0.25
       short_circuit_trajectory_evaluation: True
       stateful: True
@@ -194,12 +194,12 @@ local_costmap:
       width: 3
       height: 3
       resolution: 0.05
-      robot_radius: 0.115
+      robot_radius: 0.12
       plugins: ["obstacle_layer","voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.16
+        inflation_radius: 0.155
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -247,7 +247,7 @@ global_costmap:
       global_frame: map
       robot_base_frame: base_link
       use_sim_time: True
-      robot_radius: 0.115
+      robot_radius: 0.12
       resolution: 0.05
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "voxel_layer", "inflation_layer"]
@@ -291,7 +291,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.16
+        inflation_radius: 0.155
       always_send_full_costmap: True
 
 map_server:
@@ -325,7 +325,7 @@ recoveries_server:
     costmap_topic: local_costmap/costmap_raw
     footprint_topic: local_costmap/published_footprint
     cycle_frequency: 10.0
-    recovery_plugins: ["spin", "backup", "wait"]
+    recovery_plugins: ["spin", "backup", "Wait"]
     spin:
       plugin: "nav2_recoveries/Spin"
     backup:

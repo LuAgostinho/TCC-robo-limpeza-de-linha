@@ -12,11 +12,11 @@ class checkpoints_to_follow(Node):
         
         self.navigator = BasicNavigator()
 
-        self.goal_pose0 = self.create_pose_stamped(2.2, 1.05, 3.14)
-        self.goal_pose1 = self.create_pose_stamped(1.1, 1.05, 3.14)
-        self.goal_pose2 = self.create_pose_stamped(0.8, 1.05, 4.71)
-        self.goal_pose3 = self.create_pose_stamped(-1.0, 1.05, 3.14)
-        self.goal_pose4 = self.create_pose_stamped(-3.0, 1.5, 4.71)
+        self.goal_pose0 = self.create_pose_stamped(2.2, 1.10, 3.14)
+        self.goal_pose1 = self.create_pose_stamped(1.2, 1.0, 3.14)
+        self.goal_pose2 = self.create_pose_stamped(0.8, 1.0, 3.5)
+        self.goal_pose3 = self.create_pose_stamped(-0.8, 1.2, 3.14)
+        self.goal_pose4 = self.create_pose_stamped(-3.0, 1.2, 3.14)
 
         self.follow_waypoints()
 
@@ -51,7 +51,6 @@ class checkpoints_to_follow(Node):
         """Check if the navigation task is complete"""
         while not self.navigator.isTaskComplete():
             feedback = self.navigator.getFeedback()
-            self.get_logger().info(f"Feedback: {feedback}")
         result = self.navigator.getResult()
 
 def main(args=None):
