@@ -12,27 +12,27 @@ class checkpoints_to_follow(Node):
         
         self.navigator = BasicNavigator()
 
-        self.goal_pose0 = self.create_pose_stamped(2.1, 0.75, 3.14)
+        self.goal_pose0 = self.create_pose_stamped(2.1, 0.8, 3.14)
         self.goal_pose1 = self.create_pose_stamped(1.2, 1.0, 3.14)
         self.goal_pose2 = self.create_pose_stamped(0.95, 1.0, 3.14)
-        self.goal_pose3 = self.create_pose_stamped(-0.9, 1.15, 3.14)
+        self.goal_pose3 = self.create_pose_stamped(-1.15, 1.10, 3.0)
         self.goal_pose4 = self.create_pose_stamped(-2.9, 1.25, 0.0)
-        self.goal_pose5 = self.create_pose_stamped(2.35, 0.5, 0.0)
+        self.goal_pose5 = self.create_pose_stamped(2.40, 0.45, 0.0)
         self.goal_pose6 = self.create_pose_stamped(3.0, 0.5, 3.14)
         self.goal_pose7 = self.create_pose_stamped(-0.6, 0.6, 3.14)
-        self.goal_pose8 = self.create_pose_stamped(-2.4, 0.7, 3.14)
-        self.goal_pose9 = self.create_pose_stamped(-3.0, 0.45, 0.0)
-        self.goal_pose10 = self.create_pose_stamped(-1.0, 0.25, 0.0)
-        self.goal_pose11 = self.create_pose_stamped(0.2, -0.35, 0.0)
-        self.goal_pose12 = self.create_pose_stamped(1.75, 0.0, 0.0)
-        self.goal_pose13 = self.create_pose_stamped(2.45, 0.0, 3.14)
-        self.goal_pose15 = self.create_pose_stamped(3.0, -0.45, 3.14)
-        self.goal_pose16 = self.create_pose_stamped(-2.85, -0.3, 0.0)
-        self.goal_pose18 = self.create_pose_stamped(1.25, -0.6, 0.0)
-        self.goal_pose19 = self.create_pose_stamped(2.7, -0.6, 0.0)
-        self.goal_pose20 = self.create_pose_stamped(2.55,-0.9, 0.0)
-        self.goal_pose21 = self.create_pose_stamped(1.25, -0.6, 0.0)
-        self.goal_pose22 = self.create_pose_stamped(-2.7,-0.9, 0.0)
+        self.goal_pose8 = self.create_pose_stamped(-2.45, 0.7, 3.14)
+        self.goal_pose9 = self.create_pose_stamped(-3.0, 0.35, 0.0)
+        self.goal_pose10 = self.create_pose_stamped(0.2, -0.35, 0.0)
+        self.goal_pose11 = self.create_pose_stamped(1.75, 0.0, 0.0)
+        self.goal_pose12 = self.create_pose_stamped(2.45, 0.0, 0.0)
+        self.goal_pose13 = self.create_pose_stamped(3.0, -0.45, 3.14)
+        self.goal_pose14 = self.create_pose_stamped(1.25, -0.55, 0.0)
+        self.goal_pose15 = self.create_pose_stamped(-2.85, -0.3, 0.0)
+        self.goal_pose16 = self.create_pose_stamped(1.25, -0.6, 0.0)
+        self.goal_pose17 = self.create_pose_stamped(2.7, -0.6, 0.0)
+        self.goal_pose18 = self.create_pose_stamped(2.55,-0.9, 0.0)
+        self.goal_pose19 = self.create_pose_stamped(1.15, -0.8, 0.0)
+        self.goal_pose20 = self.create_pose_stamped(-2.7,-0.9, 0.0)
         
 
         self.follow_waypoints()
@@ -54,7 +54,7 @@ class checkpoints_to_follow(Node):
         return pose
 
     def follow_waypoints(self):
-        waypoints = [self.goal_pose0 ,self.goal_pose1,self.goal_pose2 ,self.goal_pose3, self.goal_pose4, self.goal_pose5, self.goal_pose6, self.goal_pose7, self.goal_pose8, self.goal_pose9, self.goal_pose10, self.goal_pose11, self.goal_pose12, self.goal_pose13, self.goal_pose15, self.goal_pose16, self.goal_pose18, self.goal_pose19, self.goal_pose20, self.goal_pose21, self.goal_pose22]
+        waypoints = [self.goal_pose0 ,self.goal_pose1,self.goal_pose2 ,self.goal_pose3, self.goal_pose4, self.goal_pose5, self.goal_pose6, self.goal_pose7, self.goal_pose8, self.goal_pose9, self.goal_pose10, self.goal_pose11, self.goal_pose12, self.goal_pose13, self.goal_pose14, self.goal_pose15, self.goal_pose16, self.goal_pose17, self.goal_pose18, self.goal_pose19, self.goal_pose20]
         self.get_logger().info("Following waypoints...")
         self.navigator.followWaypoints(waypoints)
         self.check_task_complete()
