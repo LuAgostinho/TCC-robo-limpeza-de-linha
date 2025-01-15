@@ -38,7 +38,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'checkpoints_to_follow = tcc.checkpoints_to_follow:main',
+            'checkpoints_vertical = tcc.checkpoints_vertical:main',
+            'checkpoints_horizontal = tcc.checkpoints_horizontal:main',
             'set_initial_pose = tcc.set_initial_pose:main',
         ],
     },

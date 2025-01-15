@@ -1,4 +1,5 @@
 [console_scripts]
-checkpoints_to_follow = tcc.checkpoints_to_follow:main
+checkpoints_horizontal = tcc.checkpoints_horizontal:main
+checkpoints_vertical = tcc.checkpoints_vertical:main
 set_initial_pose = tcc.set_initial_pose:main
 
