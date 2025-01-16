@@ -41,6 +41,7 @@ simulation/worlds/simple_room.world
 simulation/worlds/simple_room_with_fixed_boxes.world
 simulation/worlds/simple_room_with_random_boxes.world
 tcc/__init__.py
+tcc/checkpoints_contour.py
 tcc/checkpoints_horizontal.py
 tcc/checkpoints_vertical.py
 tcc/set_initial_pose.py

@@ -40,6 +40,7 @@ setup(
         'console_scripts': [
             'checkpoints_vertical = tcc.checkpoints_vertical:main',
             'checkpoints_horizontal = tcc.checkpoints_horizontal:main',
+            'checkpoints_contour = tcc.checkpoints_contour:main',
             'set_initial_pose = tcc.set_initial_pose:main',
         ],
     },
