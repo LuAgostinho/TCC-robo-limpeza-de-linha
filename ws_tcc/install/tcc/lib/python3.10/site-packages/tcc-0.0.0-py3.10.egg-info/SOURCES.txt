@@ -14,6 +14,7 @@ config/map/map.pgm
 config/map/map.yaml
 config/nav/cartographer.lua
 config/nav/ekf.yaml
+config/nav/nav2_DWBparams.yaml
 config/nav/nav2_params.yaml
 config/nav/slam_toolbox.yaml
 config/rviz/mapping_cartographer.rviz
