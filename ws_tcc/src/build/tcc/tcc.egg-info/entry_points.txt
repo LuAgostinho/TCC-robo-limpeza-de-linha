@@ -1,6 +1,0 @@
-[console_scripts]
-checkpoints_contour = tcc.checkpoints_contour:main
-checkpoints_horizontal = tcc.checkpoints_horizontal:main
-checkpoints_vertical = tcc.checkpoints_vertical:main
-set_initial_pose = tcc.set_initial_pose:main
-

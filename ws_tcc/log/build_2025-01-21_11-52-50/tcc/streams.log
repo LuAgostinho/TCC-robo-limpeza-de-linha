@@ -1,0 +1,111 @@
+[0.336s] Invoking command in '/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/src/tcc': PYTHONPATH=/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tcc build --build-base /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build install --record /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/install.log --single-version-externally-managed install_data
+[0.477s] running egg_info
+[0.478s] creating ../../build/tcc/tcc.egg-info
+[0.478s] writing ../../build/tcc/tcc.egg-info/PKG-INFO
+[0.478s] writing dependency_links to ../../build/tcc/tcc.egg-info/dependency_links.txt
+[0.478s] writing entry points to ../../build/tcc/tcc.egg-info/entry_points.txt
+[0.478s] writing requirements to ../../build/tcc/tcc.egg-info/requires.txt
+[0.478s] writing top-level names to ../../build/tcc/tcc.egg-info/top_level.txt
+[0.478s] writing manifest file '../../build/tcc/tcc.egg-info/SOURCES.txt'
+[0.479s] reading manifest file '../../build/tcc/tcc.egg-info/SOURCES.txt'
+[0.480s] writing manifest file '../../build/tcc/tcc.egg-info/SOURCES.txt'
+[0.481s] running build
+[0.481s] running build_py
+[0.481s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build
+[0.481s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib
+[0.481s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc
+[0.481s] copying tcc/__init__.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc
+[0.481s] copying tcc/checkpoints_horizontal.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc
+[0.482s] copying tcc/set_initial_pose.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc
+[0.482s] copying tcc/checkpoints_vertical.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc
+[0.482s] copying tcc/checkpoints_contour.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc
+[0.483s] running install
+[0.483s] running install_lib
+[0.484s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc
+[0.484s] copying /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc/__init__.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc
+[0.484s] copying /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc/checkpoints_horizontal.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc
+[0.484s] copying /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc/set_initial_pose.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc
+[0.484s] copying /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc/checkpoints_vertical.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc
+[0.484s] copying /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build/lib/tcc/checkpoints_contour.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc
+[0.485s] byte-compiling /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc/__init__.py to __init__.cpython-310.pyc
+[0.485s] byte-compiling /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc/checkpoints_horizontal.py to checkpoints_horizontal.cpython-310.pyc
+[0.485s] byte-compiling /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc/set_initial_pose.py to set_initial_pose.cpython-310.pyc
+[0.486s] byte-compiling /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc/checkpoints_vertical.py to checkpoints_vertical.cpython-310.pyc
+[0.487s] byte-compiling /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc/checkpoints_contour.py to checkpoints_contour.cpython-310.pyc
+[0.487s] running install_data
+[0.487s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/ament_index
+[0.487s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/ament_index/resource_index
+[0.487s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/ament_index/resource_index/packages
+[0.487s] copying resource/tcc -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/ament_index/resource_index/packages
+[0.488s] copying package.xml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc
+[0.488s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config
+[0.488s] copying config/Default.perspective -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/
+[0.488s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.488s] copying config/nav/nav2_MPPIparams.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.488s] copying config/nav/cartographer.lua -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.488s] copying config/nav/nav2_VPparams.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.489s] copying config/nav/nav2_RPPparams.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.489s] copying config/nav/slam_toolbox.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.489s] copying config/nav/nav2_DWBparams.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.490s] copying config/nav/ekf.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.490s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/map
+[0.490s] copying config/map/map.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/map
+[0.491s] copying config/map/checkpoints.json -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/map
+[0.491s] copying config/map/map.pgm -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/map
+[0.492s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/rviz
+[0.492s] copying config/rviz/robot.rviz -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/rviz
+[0.492s] copying config/rviz/navigation_MPPI.rviz -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/rviz
+[0.492s] copying config/rviz/mapping_slam_toolbox.rviz -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/rviz
+[0.493s] copying config/rviz/mapping_cartographer.rviz -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/rviz
+[0.493s] copying config/rviz/navigation.rviz -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/rviz
+[0.494s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/launch
+[0.494s] copying launch/simulation.launch.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/launch/
+[0.494s] copying launch/load.launch.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/launch/
+[0.494s] copying launch/navigation.launch.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/launch/
+[0.495s] copying launch/mapping_cartographer.launch.py -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/launch/
+[0.495s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation
+[0.495s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/worlds
+[0.495s] copying simulation/worlds/linha.world -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/worlds
+[0.495s] copying simulation/worlds/simple_room_with_random_boxes.world -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/worlds
+[0.496s] copying simulation/worlds/simple_room_with_fixed_boxes.world -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/worlds
+[0.497s] copying simulation/worlds/empty.world -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/worlds
+[0.497s] copying simulation/worlds/simple_room.world -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/worlds
+[0.497s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models
+[0.497s] copying simulation/models/model.config -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models
+[0.498s] copying simulation/models/model.sdf -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models
+[0.499s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/r2d2
+[0.499s] copying simulation/models/r2d2/model.config -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/r2d2
+[0.499s] copying simulation/models/r2d2/model.sdf -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/r2d2
+[0.500s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/box
+[0.500s] copying simulation/models/box/model.config -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/box
+[0.500s] copying simulation/models/box/model.sdf -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/box
+[0.501s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/simple_room
+[0.501s] copying simulation/models/simple_room/model.config -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/simple_room
+[0.502s] copying simulation/models/simple_room/model.sdf -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/simple_room
+[0.502s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/wood_square
+[0.502s] copying simulation/models/wood_square/model.config -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/wood_square
+[0.509s] copying simulation/models/wood_square/model.sdf -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/simulation/models/wood_square
+[0.509s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf
+[0.511s] copying urdf/robot.urdf -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/
+[0.515s] copying urdf/reserva.urdf -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/
+[0.515s] copying urdf/robot.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/
+[0.516s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/macros
+[0.516s] copying urdf/macros/link_geometry.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/macros
+[0.516s] copying urdf/macros/properties.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/macros
+[0.517s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/macros/parts
+[0.517s] copying urdf/macros/parts/wheel.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/macros/parts
+[0.517s] copying urdf/macros/parts/base.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/macros/parts
+[0.518s] creating /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/simulation
+[0.518s] copying urdf/simulation/gazebo_base.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/simulation
+[0.518s] copying urdf/simulation/gazebo_laser.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/simulation
+[0.519s] copying urdf/simulation/gazebo_camera.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/simulation
+[0.519s] copying urdf/simulation/imu.urdf.xacro -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/urdf/simulation
+[0.520s] running install_egg_info
+[0.521s] Copying ../../build/tcc/tcc.egg-info to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc-0.0.0-py3.10.egg-info
+[0.522s] running install_scripts
+[0.534s] Installing checkpoints_contour script to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/tcc
+[0.534s] Installing checkpoints_horizontal script to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/tcc
+[0.534s] Installing checkpoints_vertical script to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/tcc
+[0.534s] Installing set_initial_pose script to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/tcc
+[0.535s] writing list of installed files to '/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/install.log'
+[0.550s] Invoked command in '/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/src/tcc' returned '0': PYTHONPATH=/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tcc build --build-base /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build install --record /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/install.log --single-version-externally-managed install_data

@@ -1,0 +1,69 @@
+Visualization Manager:
+  Class: "rviz_default_plugins/VisualizationManager"
+  Displays:
+    - Class: "rviz_default_plugins/Map"
+      Name: "Map"
+      Topic: "/map"
+      Size: 0.1
+      Alpha: 0.7
+      Display in: "Fixed Frame"
+      Frame: "map"
+    
+    - Class: "rviz_default_plugins/Odom"
+      Name: "Odom"
+      Topic: "/odom"
+      Display in: "Fixed Frame"
+      Frame: "odom"
+      Alpha: 0.8
+      Line Width: 0.1
+      Color: [0.0, 1.0, 0.0]  # Green
+    
+    - Class: "rviz_default_plugins/RobotModel"
+      Name: "RobotModel"
+      Robot Description Topic: "/robot_description"
+      Display in: "Fixed Frame"
+      Frame: "base_link"
+      Alpha: 1.0
+    
+    - Class: "rviz_default_plugins/Path"
+      Name: "Path"
+      Topic: "/planned_path"  # Adjust this topic if needed
+      Line Style: "Lines"
+      Line Width: 0.03
+      Color: [0.0, 0.0, 1.0]  # Blue
+      Display in: "Fixed Frame"
+      Frame: "map"
+    
+    - Class: "rviz_default_plugins/MarkerArray"
+      Name: "MPPI Markers"
+      Topic: "/mppi_markers"  # This could be a topic for visualization of MPPI trajectories
+      Display in: "Fixed Frame"
+      Frame: "map"
+    
+    - Class: "rviz_default_plugins/Goal"
+      Name: "Goal"
+      Topic: "/move_base_simple/goal"  # Goal topic
+      Display in: "Fixed Frame"
+      Frame: "map"
+      Color: [1.0, 0.0, 0.0]  # Red
+    
+    - Class: "rviz_default_plugins/Trajectory"
+      Name: "Trajectory"
+      Topic: "/mppi_trajectory"  # The topic where the MPPI trajectory is published
+      Line Style: "Lines"
+      Line Width: 0.05
+      Color: [0.0, 1.0, 0.0]  # Green
+
+  Fixed Frame: "map"
+  Enable Statistics: true
+  Stats Topics:
+    - "/move_base/status"
+    - "/mppi_controller/status"
+  Global Options:
+    - Name: "Fixed Frame"
+      Value: "map"
+
+Global Options:
+  - Name: "Background Color"
+    Value: [0.0, 0.0, 0.0]  # Black background
+

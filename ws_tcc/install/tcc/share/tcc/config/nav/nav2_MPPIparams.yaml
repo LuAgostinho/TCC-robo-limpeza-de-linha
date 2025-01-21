@@ -139,7 +139,6 @@ controller_server:
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.3
       yaw_goal_tolerance: 0.45
-    # DWB parameters
     FollowPath:
       plugin: "nav2_mppi_controller::MPPIController"
       time_steps: 56
@@ -148,14 +147,10 @@ controller_server:
       vx_std: 0.2
       vy_std: 0.2
       wz_std: 0.4
-      vx_max: 0.2
-      vx_min: -0.2
-      vy_max: 0.0
-      wz_max: 2.0
-      ax_max: 3.0
-      ax_min: -3.0
-      ay_max: 3.0
-      az_max: 3.5
+      vx_max: 0.5
+      vx_min: -0.35
+      vy_max: 0.5
+      wz_max: 1.9
       iteration_count: 1
       prune_distance: 1.7
       transform_tolerance: 0.1
@@ -163,8 +158,6 @@ controller_server:
       gamma: 0.015
       motion_model: "DiffDrive"
       visualize: false
-      reset_period: 1.0 # (only in Humble)
-      regenerate_noises: false
       TrajectoryVisualizer:
         trajectory_step: 5
         time_step: 3
@@ -199,8 +192,6 @@ controller_server:
       #   collision_cost: 10000.0
       #   collision_margin_distance: 0.1
       #   near_goal_distance: 0.5
-      #   inflation_radius: 0.55 # (only in Humble)
-      #   cost_scaling_factor: 10.0 # (only in Humble)
       CostCritic:
         enabled: true
         cost_power: 1
@@ -209,13 +200,13 @@ controller_server:
         consider_footprint: true
         collision_cost: 1000000.0
         near_goal_distance: 1.0
-        trajectory_point_step: 2
+      PathAlignCritic:
       PathAlignCritic:
         enabled: true
         cost_power: 1
         cost_weight: 14.0
         max_path_occupancy_ratio: 0.05
-        trajectory_point_step: 4
+        trajectory_point_step: 3
         threshold_to_consider: 0.5
         offset_from_furthest: 20
         use_path_orientations: false
@@ -232,7 +223,7 @@ controller_server:
         offset_from_furthest: 4
         threshold_to_consider: 0.5
         max_angle_to_furthest: 1.0
-        mode: 0
+        forward_preference: true
       # VelocityDeadbandCritic:
       #   enabled: true
       #   cost_power: 1
@@ -242,8 +233,6 @@ controller_server:
       #   enabled: true
       #   twirling_cost_power: 1
       #   twirling_cost_weight: 10.0
-
-
 local_costmap:
   local_costmap:
     ros__parameters:
@@ -359,9 +348,7 @@ global_costmap:
 map_server:
   ros__parameters:
     use_sim_time: True
-    # Overridden in launch by the "map" launch configuration or provided default value.
-    # To use in yaml, remove the default "map" value in the tb3_simulation_launch.py file & provide full path to map below.
-    yaml_filename: ""
+    yaml_filename: "home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/src/tcc/config/map"
 
 map_saver:
   ros__parameters:
@@ -404,15 +391,15 @@ planner_server:
 #    rotational_acc_lim: 3.2
     
 
-#smoother_server:
-#  ros__parameters:
-#    use_sim_time: True
-#    smoother_plugins: ["simple_smoother"]
-#    simple_smoother:
-#      plugin: "nav2_smoother::SimpleSmoother"
-#      tolerance: 1.0e-10
-#      max_its: 1000
-#      do_refinement: True
+smoother_server:
+  ros__parameters:
+    use_sim_time: True
+    smoother_plugins: ["simple_smoother"]
+    simple_smoother:
+      plugin: "nav2_smoother::SimpleSmoother"
+      tolerance: 1.0e-10
+      max_its: 1000
+      do_refinement: True
 
 behavior_server:
   ros__parameters:
@@ -460,11 +447,11 @@ waypoint_follower:
 #    smoothing_frequency: 20.0
 #    scale_velocities: False
 #    feedback: "OPEN_LOOP"
-#    max_velocity: [0.2, 0.0, 2.0]
-#    min_velocity: [-0.2, 0.0, -2.0]
-#    max_accel: [3.2, 0.0, 3.2]
-#    max_decel: [3.2, 0.0, -3.2]
+#    max_velocity: [0.15, 0.0, 2.0]
+#    min_velocity: [-0.15, 0.0, -2.0]
+#    max_accel: [2.5, 0.0, 3.2]
+#    max_decel: [-2.5, 0.0, -3.2]
 #    odom_topic: "odom"
 #    odom_duration: 0.1
-#    deadband_velocity: [0.0, 0.0, 0.0]
+#   deadband_velocity: [0.0, 0.0, 0.0]
 #    velocity_timeout: 1.0
