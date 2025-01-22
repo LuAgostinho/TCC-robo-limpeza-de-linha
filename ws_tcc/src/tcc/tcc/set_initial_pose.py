@@ -16,6 +16,8 @@ class set_initial_pose(Node):
         self.navigator.setInitialPose(initial_pose)
 
         self.navigator.waitUntilNav2Active()
+        
+        self.navigator.clearAllCostmaps()
 
 
     def create_pose_stamped(navigator: BasicNavigator, position_x, position_y, orientation_z):
