@@ -136,7 +136,7 @@ controller_server:
       yaw_goal_tolerance: 0.5
     FollowPath:
       plugin: "vector_pursuit_controller::VectorPursuitController"
-      k: 2.0
+      k: 1.0
       desired_linear_vel: 0.2
       min_turning_radius: 0.25
       lookahead_dist: 0.4
