@@ -46,7 +46,7 @@ def generate_launch_description():
                 'use_sim_time': 'true',
                 'log_level': LaunchConfiguration('log_level'),
                 'map': [get_package_share_directory('tcc'),'/config/map/map.yaml'],
-                'params_file': [get_package_share_directory('tcc'),'/config/nav/nav2_RPPparams.yaml']
+                'params_file': [get_package_share_directory('tcc'),'/config/nav/nav2_VPparams.yaml']
              }.items(),
     )
     

@@ -11,7 +11,7 @@ running build_py
 running install
 running install_lib
 running install_data
-copying config/nav/nav2_RPPparams.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+copying config/nav/nav2_VPparams.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
 running install_egg_info
 removing '/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc-0.0.0-py3.10.egg-info' (and everything under it)
 Copying ../../build/tcc/tcc.egg-info to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc-0.0.0-py3.10.egg-info
