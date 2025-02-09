@@ -1,0 +1,26 @@
+[0.662s] Invoking command in '/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/src/tcc': PYTHONPATH=/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tcc build --build-base /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build install --record /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/install.log --single-version-externally-managed install_data
+[0.785s] running egg_info
+[0.786s] writing ../../build/tcc/tcc.egg-info/PKG-INFO
+[0.788s] writing dependency_links to ../../build/tcc/tcc.egg-info/dependency_links.txt
+[0.788s] writing entry points to ../../build/tcc/tcc.egg-info/entry_points.txt
+[0.788s] writing requirements to ../../build/tcc/tcc.egg-info/requires.txt
+[0.789s] writing top-level names to ../../build/tcc/tcc.egg-info/top_level.txt
+[0.791s] reading manifest file '../../build/tcc/tcc.egg-info/SOURCES.txt'
+[0.792s] writing manifest file '../../build/tcc/tcc.egg-info/SOURCES.txt'
+[0.792s] running build
+[0.792s] running build_py
+[0.794s] running install
+[0.794s] running install_lib
+[0.797s] running install_data
+[0.805s] copying config/nav/nav2_VPparams.yaml -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/nav
+[0.808s] copying config/rviz/navigation.rviz -> /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/share/tcc/config/rviz
+[0.814s] running install_egg_info
+[0.815s] removing '/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc-0.0.0-py3.10.egg-info' (and everything under it)
+[0.816s] Copying ../../build/tcc/tcc.egg-info to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc-0.0.0-py3.10.egg-info
+[0.817s] running install_scripts
+[0.831s] Installing checkpoints_contour script to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/tcc
+[0.832s] Installing checkpoints_horizontal script to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/tcc
+[0.833s] Installing checkpoints_vertical script to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/tcc
+[0.833s] Installing set_initial_pose script to /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/tcc
+[0.833s] writing list of installed files to '/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/install.log'
+[0.848s] Invoked command in '/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/src/tcc' returned '0': PYTHONPATH=/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tcc build --build-base /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/build install --record /home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/build/tcc/install.log --single-version-externally-managed install_data

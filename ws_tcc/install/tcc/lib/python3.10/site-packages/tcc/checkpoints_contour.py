@@ -42,11 +42,11 @@ class checkpoints_to_follow(Node):
         self.goal_pose27 = self.create_pose_stamped(-1.6, 0.2, 2.5)
         
 
-        self.follow_waypoints()
+        #self.follow_waypoints()
 
         #self.go_to_waypoint()
         
-        #self.go_through_poses()
+        self.go_through_poses()
 
     def create_pose_stamped(navigator: BasicNavigator, position_x, position_y, orientation_z):
         q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, orientation_z)

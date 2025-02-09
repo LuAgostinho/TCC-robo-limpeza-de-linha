@@ -42,6 +42,7 @@ setup(
             'checkpoints_horizontal = tcc.checkpoints_horizontal:main',
             'checkpoints_contour = tcc.checkpoints_contour:main',
             'set_initial_pose = tcc.set_initial_pose:main',
+            'checkpoints_random = tcc.checkpoints_random:main'
         ],
     },
 )

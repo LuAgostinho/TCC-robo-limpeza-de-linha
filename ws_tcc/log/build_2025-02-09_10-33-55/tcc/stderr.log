@@ -1,0 +1,5 @@
+  File "/home/lucas/Documents/GitHub/TCC-robo-limpeza-de-linha/ws_tcc/install/tcc/lib/python3.10/site-packages/tcc/checkpoints_random.py", line 28
+    	break
+    	^^^^^
+SyntaxError: 'break' outside loop
+
